@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10% 20px 10%;
+}
+
+
+li, a, button{
+    font-weight: 500;
+    font-size: 16px;
+    color: #37d6e1;
+    text-decoration: none;
+}
+
+
+.logo{
+    display: flex;
+    color: #37d6e1;
+    font-size: larger;
+    cursor: pointer;
+    align-items: center;
+}
+.logo h3{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.logo i{
+    margin: auto;
+    font-size: 25px;
+}
+
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: #2db0b9;
+}
+
+/* LINHA EMBAIXO DOS LINKS */
+.nav_links li a::after{
+    content: "";
+    background-color: #2db0b9;
+    height: 3px;
+    width: 0;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+.nav_links li a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+}
+/* LINHA EMBAIXO DOS LINKS */
+
+.searchBox{
+    width: 30px;
+    height: 9px;
+    background-color: #c5c5c546;
+    border-radius: 50px;
+    display: flex;
+    justify-content: right;
+    padding: 20px 29px;
+    gap: 10px;
+    cursor: pointer;
+    padding-right: 13px;
+    align-items: center;
+    transition: width 500ms
+        cubic-bezier(0.68, -0.55, 0.8, 1.55);
+    overflow: hidden;
+}
+.searchBox.active{
+    width: 300px;
+    justify-content: flex-end;
+    cursor: default;
+}
+.searchBox.active > :is(i, input){
+    display: block;
+}
+.searchBox input{
+    display: none;
+    outline: none;
+    border: none;
+    color: gray;
+    font-size: 15px;
+    background-color: transparent;
+}
+i.closeBtn{
+    display: none;
+    margin-left: auto;
+    cursor: pointer;
+    color: #808080a6;
+}
+.searchBox input::placeholder{
+    color: gray;
+}
+.icons{
+    display: flex;
+    align-items: center;
+}
+.searchBox i{
+    font-size: 20px;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: #37d6e1;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 12.5px;
+}
+button:hover{
+    background-color: #2db0b9;
+}
+/* HEADER */
+
+hr {
+    background: #37d6e1;
+    border: 3px;
+    height: 2px;
+    margin: 5px 10%;
+}
+
+/* SECTION 1 */
+.box1{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 10% 50px 10%;
+}
+
+.text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.text1 h3{
+    font-size: 12px;
+    font-weight: 400;
+}
+.text1 h1{
+    color: #37d6e1;
+    font-size: 50px;
+}
+.text1 i{
+    padding: 11px 13px;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 50%;
+    margin: 0 10px 0 0px;
+}
+.text1 h2{
+    color: #000000;
+    font-weight: 600;
+    font-size: 15px;
+}
+.logo1{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    height: 450px;
+    width: 450px;
+}
+
+.tags{
+    display: flex;
+    align-items: center;
+}
+.tags a{
+    text-decoration: none;
+    padding: 8px 13px;
+    background-color: #acacac34;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 10px;
+    color: #000000;
+}
+/* SECTION 1 */
+
+/*SECTION 2*/
+.box2{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 10% 50px 10%;
+}
+
+.col-1{
+    display: flex;
+    align-items: center;
+    
+}
+.n1{
+    margin-bottom: 60px;
+}
+
+.box2 h1{
+    color: #37d6e1;
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.box2 p{
+    font-size: 15px;
+}
+
+.text2{
+    margin: 0 30px 0 30px;
+}
+.text2 h3{
+    color: #000000;
+    margin-bottom: 25px;
+}
+.text2 li{
+    color: #000000;
+    margin: 0 2%;
+}
+.text3{
+    margin: 0 30px 0 30px;
+}
+/*SECTION 2*/
+
+/* SECTION 3 */
+.box3{
+    margin: 100px 10% 100px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box3 img{
+    height: 300px;
+    width: 375px;
+    margin-bottom: 10px;
+}
+
+.box3 p{
+    font-size: 15px;
+}
+.box3 h1{
+    font-size: 25px;
+    margin: 10px 0 10px 0;
+    color: #37d6e1;
+}
+.box3 a{
+    color: #000000;
+    text-decoration: none;
+}
+.box3 a:hover{
+    text-decoration: underline;
+}
+.box3 i{
+    margin-left: 5px;
+}
+
+.col-2{
+    width: 375px;
+}
+
+/* SECTION 3 */
+
+
+/* SECTION 6 */
+.box6{
+    display: flex;
+    justify-content: space-between;
+    margin: 75px 10% 8% 10%;
+}
+
+.box6 a{
+    text-decoration: underline;
+}
+
+.col-5{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+.info1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.box6 i{
+    color: #37d6e1;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.logo-icons{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 20px;
+}
+.part1{
+    display: flex;
+}
+
+form{
+    display: flex;
+}
+.subscribe-form{
+    align-items: center;
+    display: flex;
+}
+.subscribe-form button{
+    margin-left: 0;
+}
+
+.subscribeBox{
+    margin-right: 5px;
+    padding: 9px 15px;
+    border-radius: 7px;
+    border: 3px solid;
+    border-color: #37d6e1;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease 0s;
+}
+
+.subscribe-form input{
+    width: 200px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: gray;
+    margin-left: 5px;
+}
+.subscribeBox:hover{
+    border-color: #2db0b9;
+    color: #2db0b9;
+}
+
+input::placeholder{
+    color: #37d6e1;
+}
+
+input:focus{
+    outline-color: #2db0b9;
+}
+/* SECTION 6 */
+
+
+
+/* FORM BOX */
+.home{
+    display: flex;
+}
+.formBox{
+    position: fixed;
+    max-width: 320px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background-color: white;
+    padding: 25px;
+    
+    border-radius: 17px;
+    box-shadow: 15px 15px 250px -35px rgba(0,0,0,0.75);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+}
+
+.home.show .formBox{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.formBox form{
+    display: flex;
+    flex-direction: column;
+}
+.singupForm{
+    display: none;
+}
+.formBox.active .singupForm{
+    display: block;
+}
+.formBox.active .loginForm{
+    display: none;
+}
+.form_close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #0000003b;
+    font-size: 22px;
+    cursor: pointer;
+}
+.formBox h2{
+    text-align: center;
+    color: #0b0217;
+    font-size: 22px;
+}
+.inputBox{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+}
+.inputBox input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    border-bottom: 1.5px solid #aaaaaa;
+    padding-left: 25px;
+    color: #9c9c9c;
+}
+.inputBox input::placeholder{
+    color: #9c9c9c;
+}
+.inputBox input:focus{
+    border-color: #37d6e1;
+}
+.inputBox input:focus ~ .icon{
+    color: #37d6e1;
+}
+.inputBox i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9c9c9c;
+    font-size: 15px;
+}
+.inputBox .pw_hide{
+    right: 0;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+
+.option_field{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.formBox a{
+    font-size: 12px;
+}
+.formBox a:hover{
+    text-decoration: underline;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    white-space: nowrap;
+    font-size: 12px;
+}
+.checkbox input{
+    accent-color: #37d6e1;
+}
+.checkbox label{
+    font-size: 12px;
+    color: #0b0217;
+}
+.formBox .button{
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    margin-left: 0;
+}
+.login_singup{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+/* FORM BOX */
+
