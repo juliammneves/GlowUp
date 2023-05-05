@@ -47,55 +47,14 @@ closeBtn.onclick = function close(){
 } 
 
 //blog show more, show less
-let more = document.querySelector('#more'), 
-    view = document.querySelector(".view"),
-    isActivated = false,
-    originalText = more.textContent;
-
-more.addEventListener("click", () => {
-  if (!isActivated) {
-    view.classList.add("show");
-    more.textContent = "Ver menos";
-  } else {
-    view.classList.remove("show");
-    more.textContent = originalText;
+var delay = 260;
+function changeText() {
+    var label = document.getElementById("myLabel");
+    if (label.innerHTML === "Ver mais") {
+      label.innerHTML = "Ver menos";
+    } else {
+        setTimeout(function() {
+            label.innerHTML = "Ver mais";
+          }, delay);
+    }
   }
-  
-  isActivated = !isActivated;
-});
-let more2 = document.querySelector('#more2'), 
-    view2 = document.querySelector(".view2"),
-    isActivated2 = false,
-    originalText2 = more2.textContent;
-
-more.addEventListener("click", () => {
-  if (!isActivated2) {
-    view.classList.add("show");
-    more.textContent = "Ver menos";
-  } else {
-    view.classList.remove("show");
-    more.textContent = originalText2;
-  }
-  
-  isActivated2 = !isActivated2;
-});
-
-
-
-
-
-
-/* 
-let more = document.querySelector('#more'), 
-    view = document.querySelector(".view")
-more.addEventListener("click", () => view.classList.add("show")) */
-
-/* 
-
-more.addEventListener("click", () => {
-    view.classList.add("show");
-    more.textContent = "Ver menos";});
-
-more.addEventListener("click", () => {
-    view.classList.remove("show");
-    more.textContent = "Ver mais";}); */
